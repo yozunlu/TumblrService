@@ -1,0 +1,77 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <h1 class="text-center">
+        {{ title }}
+      </h1>
+      <div class="content">
+        <div class="description">
+          <p>{{ description }}</p>
+          <p>Total Post: {{ total }}</p>
+        </div>
+        <div class="post" *ngFor="let post of posts">
+          <div *ngIf="post.type == 'quote'">
+            <div class="date">
+              <div class="date-brick">
+                {{post.date | date: 'MMM'}}
+                <br>
+                {{post.date | date: 'd'}}
+              </div>
+              {{post.date | date: 'EE'}}
+            </div>
+            <p class="quote-text h2">{{ post.quote_text }}</p>
+            <div class="source" [innerHTML]="post.quote_source | keepHtml"></div>
+          </div>
+          <div *ngIf="post.type == 'photo'">
+            <a [(href)]="post.url">
+              <img [(src)]="post.photo_url_400" [(alt)]="post.tags">
+            </a>
+            <div class="source" [innerHTML]="post.photo_caption | keepHtml"></div>
+          </div>
+          <div *ngIf="post.type == 'link'">
+            <a [(href)]="post.link_url">{{post.link_text}}</a>
+            <div [innerHTML]="post.link_description | keepHtml"></div>
+          </div>
+          <div *ngIf="post.type == 'conversation'">
+            <ul *ngFor="let con of post.conversation">
+              <li class="odd" *ngIf="con.name == 'Jack'">
+                {{ con.label }} : {{con.phrase}}
+              </li>
+              <li class="even" *ngIf="con.name == 'Lindsey'">
+                {{ con.label }} : {{con.phrase}}
+              </li>
+            </ul>
+          </div>
+          <div *ngIf="post.type == 'audio'">
+            <div class="date">
+              <div class="date-brick">
+                {{post.date | date: 'MMM'}}
+                <br>
+                {{post.date | date: 'd'}}
+              </div>
+              {{post.date | date: 'EE'}}
+            </div>
+            <div [innerHTML]="post.audio_player | keepHtml"></div>
+            <div class="source" [innerHTML]="post.audio_caption | keepHtml"></div>
+          </div>
+          <div *ngIf="post.type == 'regular'">
+            <div class="date">
+              <div class="date-brick">
+                {{post.date | date: 'MMM'}}
+                <br>
+                {{post.date | date: 'd'}}
+              </div>
+              {{post.date | date: 'EE'}}
+            </div>
+            <div class="regular">
+              <a [(href)]="post.url">
+                <h3>{{ post.regular_title}}</h3>
+              </a>
+              <div [innerHTML]="post.regular_body | keepHtml"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

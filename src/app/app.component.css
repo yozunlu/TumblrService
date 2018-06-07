@@ -1,0 +1,103 @@
+h1 {
+  width: 600px;
+  padding: 0px 100px 20px 100px;
+  margin: 50px auto 40px auto;
+  border-bottom: solid 1px #ccc;
+  text-align: center;
+  font: Bold 55px 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  letter-spacing: -2px;
+  line-height: 50px;
+  position: relative;
+}
+
+.content {
+  width: 420px;
+  margin: auto;
+  position: relative;
+}
+
+.description {
+  position: absolute;
+  right: -170px;
+  width: 160px;
+  text-align: right;
+  font: normal 17px Helvetica, Arial, sans-serif;
+  line-height: 20px;
+  color: #777;
+}
+.post {
+  position: relative;
+  margin-bottom: 40px;
+  padding-right: 20px
+}
+
+.date {
+  position: absolute;
+  left: -260px;
+  text-align: right;
+  width: 230px;
+  white-space: nowrap;
+  font: normal 34px Helvetica, sans-serif;
+  letter-spacing: -2px;
+  color: #ccc;
+  text-transform: uppercase;
+  line-height: 35px;
+}
+
+.date-brick {
+  float: right;
+  height: 40px;
+  width: 45px;
+  background-color: #6498cc;
+  color: #bbd5f1;
+  font: Bold 12px Verdana, Sans-Serif;
+  text-align: center;
+  line-height: 12px;
+  margin-left: 10px;
+  padding-top: 5px;
+  letter-spacing: 0px;
+  overflow: hidden;
+}
+
+.quote-text {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  color: #888;
+  border-left: solid 5px #6498cc;
+  padding-left: 10px;
+}
+
+.source {
+  font-size: 16px;
+  font-weight: Bold;
+  color: #555;
+  margin-top: 5px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px 0px 0px 1px;
+  border-left: solid 5px #bbb;
+}
+
+ul li {
+  font-size: 12px;
+  padding: 4px 10px 4px 8px;
+  color: #444;
+  margin-bottom: 1px;
+}
+
+ul li.odd {
+  background-color: #f4f4f4;
+}
+
+ul li.even {
+  background-color: #e8e8e8;
+}
+
+.regular {
+  font-size: 12px;
+  color: #444;
+  line-height: 17px;
+}
